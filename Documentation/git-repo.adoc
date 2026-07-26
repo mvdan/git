@@ -127,6 +127,18 @@ values that they return:
 	The path to the repository's hooks directory relative to the current
 	working directory. Respects `core.hooksPath` configuration adjustments.
 
+`path.index.absolute`::
+	The canonical absolute path to the repository's current index file.
+	Respects the `GIT_INDEX_FILE` environment override. The returned path
+	reflects the configured/default index location regardless of whether the
+	repository is bare or whether the file currently exists.
+
+`path.index.relative`::
+	The path to the repository's current index file relative to the current
+	working directory. Respects the `GIT_INDEX_FILE` environment override.
+	The returned path reflects the configured/default index location regardless
+	of whether the repository is bare or whether the file currently exists.
+
 `path.objects.absolute`::
 	The canonical absolute path to the repository's object database directory.
 	Respects the `GIT_OBJECT_DIRECTORY` environment override.
